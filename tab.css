@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding:0;
+  font-family:"Poppins",sans-serif;
+  box-sizing:border-box;
+}
+body{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:#dad3f8;
+}
+.container{
+  width:100%;
+  max-width:950px;
+  background:#fff;
+  padding:40px 50px 40px 40px;
+  margin:0 20px;
+  border-radius:12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .main-title{
+  font-size:30px;
+  font-weight:600;
+  margin-bottom:20px;
+}
+.container .content{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .list{
+  display:flex;
+  flex-direction: column;
+  position:relative;
+  width: 31%;
+  margin-right:20px;
+}
+.content .list label{
+
+  font-size:22px;
+  font-weight:600;
+  height:60px;
+  cursor: pointer;
+  border-radius:12px;
+  line-height: 60px;
+  padding-left:25px;
+  color:#333;
+  z-index: 12;
+  transition: all 0.4s ease;
+}
+.content .list label:hover{
+  color:#6d50e2;
+}
+.content .indecator{
+  position:absolute;
+  height:60px;
+  width:90%;
+  left:0;
+  top:0;
+  background: #6d50e2;
+  border-radius:12px;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+#home:checked~ .list .indecator{
+  top:0;
+}
+#blog:checked~ .list .indecator{
+  top:60px;
+}
+#help:checked~ .list .indecator{
+  top:120px;
+}
+#code:checked~ .list .indecator{
+  top:180px;
+}
+#about:checked~ .list .indecator{
+  top:240px;
+}
+
+.container input[type="radio"]{
+  display:none
+}
+.container .content .text-content{
+  width:69%;
+  height:100%;
+}
+.container .content .text-content p{
+  text-align: justify;
+}
+.container  .text-content .title{
+  font-size:25px;
+  font-weight: 600;
+  margin-bottom:10px
+}
+.container  .text-content .text{
+  display:none;
+}
+.container  .text-content .home{
+  display:block;
+}
+
+#home:checked~ .list .home,
+#blog:checked~ .list .blog,
+#help:checked~ .list .help,
+#code:checked~ .list .code,
+#about:checked~ .list .about{
+  color:#fff;
+}
+#home:checked~ .text-content .home,
+#blog:checked~ .text-content .blog,
+#help:checked~ .text-content .help,
+#code:checked~ .text-content .code,
+#about:checked~ .text-content .about{
+  display:block;
+}
+
+#blog:checked~ .text-content .home,
+#help:checked~ .text-content .home,
+#code:checked~ .text-content .home,
+#about:checked~ .text-content .home{
+  display:none;
+}
